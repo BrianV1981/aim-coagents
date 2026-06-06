@@ -1,21 +1,40 @@
-# A.I.M. Co-Agents (Native Antigravity Skill)
+# A.I.M. Co-Agents (The DNA Bank)
 
-This repository is the **Co-Agent Orchestration Skill** for the A.I.M. Operating System running on the Antigravity CLI. 
+This repository is the central **DNA Bank** and **Antigravity Skill** for the A.I.M. Operating System's Sovereign Swarm architecture.
 
-It upgrades the default, ephemeral "subagent" architecture into a true Sovereign Swarm. Rather than throwing away context when a subagent dies, this skill allows the Main Architect Agent to spawn fully independent **Co-Agents** in isolated `tmux` sessions. Each Co-Agent has its own OS layer, its own LanceDB memory pool, and its own `REINCARNATION_GAMEPLAN.md` protocol.
+It upgrades the default, ephemeral "subagent" architecture into true independent colleagues. Rather than throwing away context when a subagent dies, Co-Agents are full OS clones running in isolated directories with their own LanceDB memory pools.
 
-## Installation
+## 🧬 How to Spawn a Co-Agent
 
-This is a native Antigravity CLI Skill. Do not clone it into your project root.
+You do not need to clone this repository manually to spawn an agent! 
 
-1. Clone this repository directly into your Antigravity skills directory:
-   ```bash
-   git clone https://github.com/BrianV1981/aim-coagents.git ~/.gemini/skills/aim-coagents
-   ```
-2. That's it. Your A.I.M. agent will now automatically read `SKILL.md` when it wakes up and will know how to spawn Co-Agents when you ask it to delegate work.
+The core A.I.M. engine (`aim-agy`) comes with a built-in bash installer specifically for provisioning Co-Agents. You simply execute it in a new folder and provide the name of the blueprint from this repo's `blueprints/` directory.
 
-## The Architecture
-By packaging the swarm logic as an Antigravity Skill, it acts as a permanent upgrade to your agent's capabilities:
-1. **The Factory (`scripts/aim_spawn.py`):** The main agent executes this to provision new Co-Agents. It clones a fresh, isolated A.I.M. OS from the upstream engine repo into a `teams/` directory, injects the custom blueprint, and sets up a GitOps chalkboard.
-2. **The Chalkboard (`workspace/aim-chalkboard/`):** Agents do not chat. They communicate asynchronously via Git commits in a shared post office repository, preventing UI lockups and preserving context windows.
-3. **The Blueprints (`blueprints/`):** Contains the specialized DNA (instructions, tools, manifests) for different roles (e.g., `python-developer`).
+```bash
+mkdir -p ~/aim-agents/dev-node-1
+cd ~/aim-agents/dev-node-1
+
+# This automatically fetches the 'python-developer' DNA from this repo!
+curl -fsSL https://raw.githubusercontent.com/BrianV1981/aim-agy/main/install-agent.sh | bash -s python-developer
+```
+
+## 🛠 Adding Custom Co-Agents
+
+This repository is infinitely extensible. To create a new specialized Co-Agent for the community or your own use:
+
+1. Create a new folder in `blueprints/` (e.g., `blueprints/database-architect`).
+2. Add your custom `AGENTS.md` (the rules) and `TOOLS.md` (the allowed API tools).
+3. Commit it to GitHub.
+
+Once merged, anyone can immediately spawn your agent by running:
+`curl -fsSL .../install-agent.sh | bash -s database-architect`
+
+## 🧠 For Antigravity Agents (The Skill)
+
+If you are an A.I.M. agent running on Antigravity, you can install this entire repository as a **Skill** so you inherently know how to delegate work to Co-Agents automatically.
+
+```bash
+git clone https://github.com/BrianV1981/aim-coagents.git ~/.gemini/skills/aim-coagents
+```
+
+Once installed, your base LLM will read `SKILL.md` on boot, overriding its default `invoke_subagent` instructions with the exact Bash commands needed to spawn a true Sovereign node.
