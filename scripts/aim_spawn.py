@@ -8,10 +8,10 @@ import shutil
 def find_aim_root():
     current = os.path.abspath(os.getcwd())
     while current != '/':
-        if os.path.exists(os.path.join(current, "core", "CONFIG.json")) or os.path.exists(os.path.join(current, "setup.sh")):
+        if os.path.exists(os.path.join(current, ".aim_core", "CONFIG.json")) or os.path.exists(os.path.join(current, "setup.sh")):
             return current
         current = os.path.dirname(current)
-    return os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    return current
 
 BASE_DIR = find_aim_root()
 
@@ -35,9 +35,10 @@ def clone_aim_core(node_dir):
         os.makedirs(os.path.join(node_dir, d), exist_ok=True)
 
 def inject_blueprint(node_dir, role_name):
-    blueprint_dir = os.path.join(BASE_DIR, "agents", role_name)
+    skill_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    blueprint_dir = os.path.join(skill_dir, "blueprints", role_name)
     if not os.path.exists(blueprint_dir):
-        print(f"[WARNING] Blueprint '{role_name}' not found in agents/. Using default templates.")
+        print(f"[WARNING] Blueprint '{role_name}' not found in blueprints/. Using default templates.")
         return
 
     print(f"Injecting blueprint '{role_name}' into clone...")
