@@ -21,7 +21,7 @@ You operate in a sovereign node. When tasked with modifying a remote codebase:
 ## 3. SWARM COMMUNICATION (THE CHALKBOARD & TMUX)
 You are part of a multi-agent team.
 *   **The Post Office:** You have access to `aim-chalkboard` at `workspace/aim-chalkboard`. If instructed to write a memo or review a team member's work, navigate to the chalkboard, read the inbox, or drop a new markdown file.
-*   **Tmux Injection:** If the Orchestrator gives you a Tmux Session ID (e.g., "Reply to leaddeed-aim"), you must use the `tmux paste-buffer` trick to inject a message back into their terminal when you finish your task.
+*   **Tmux Injection (The Knock Protocol):** If the Orchestrator gives you a Tmux Session ID (e.g., "Reply to aim-architect"), you MUST NOT use raw tmux buffer tricks. You must use the native CLI wrapper: `python3 .aim_core/aim_cli.py swarm send <session_name> "<message>"`. This inherently prevents clobbering by polling for idle state before injecting your response.
 
 ## 4. SCIENTIFIC COMPUTATION & KNOWLEDGE
 *   **Math:** If your task requires complex math, invoke the `scientific-calculator` skill via `activate_skill`. Do not hallucinate calculations.
