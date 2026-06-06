@@ -1,31 +1,21 @@
-# A.I.M. Swarm Extension
+# A.I.M. Co-Agents (Native Antigravity Skill)
 
-This repository is the **Swarm Orchestration Extension** for the A.I.M. (Actual Intelligent Memory) Operating System. 
+This repository is the **Co-Agent Orchestration Skill** for the A.I.M. Operating System running on the Antigravity CLI. 
 
-It is designed as a standalone, modular add-on. Rather than mutating the base A.I.M. engine, this repository provides specialized factory scripts, Orchestrator personas, and agent blueprints that run *on top* of a globally installed A.I.M. core.
+It upgrades the default, ephemeral "subagent" architecture into a true Sovereign Swarm. Rather than throwing away context when a subagent dies, this skill allows the Main Architect Agent to spawn fully independent **Co-Agents** in isolated `tmux` sessions. Each Co-Agent has its own OS layer, its own LanceDB memory pool, and its own `REINCARNATION_GAMEPLAN.md` protocol.
+
+## Installation
+
+This is a native Antigravity CLI Skill. Do not clone it into your project root.
+
+1. Clone this repository directly into your Antigravity skills directory:
+   ```bash
+   git clone https://github.com/BrianV1981/aim-coagents.git ~/.gemini/skills/aim-coagents
+   ```
+2. That's it. Your A.I.M. agent will now automatically read `SKILL.md` when it wakes up and will know how to spawn Co-Agents when you ask it to delegate work.
 
 ## The Architecture
-By decoupling the swarm logic from the A.I.M. OS, `aim-swarm` serves as a pure orchestration layer:
-1. **The Factory (`swarm/aim_spawn.py`):** Provisions new agents by cloning a fresh, isolated A.I.M. OS from the upstream engine repository, injecting the custom persona blueprint into it, and setting up an asynchronous git-based chalkboard for inter-agent communication.
-2. **The Tmux Orchestrator (`swarm/aim_team.py`):** Splits your terminal into a live grid, booting up each specialized agent in its own isolated pane, and passing session metadata so agents can asynchronously paste multiline responses back to you without UI lockups.
-3. **The Blueprints (`agents/`):** Contains the specialized DNA (instructions, tools, manifests) for different roles (e.g., `python-developer`).
-
-## Installation for A.I.M. Agents
-
-If you are an A.I.M. agent tasked with deploying a swarm:
-
-1. Clone this repository into your working directory:
-   ```bash
-   git clone https://github.com/BrianV1981/aim-swarm.git my-swarm-project
-   cd my-swarm-project
-   ```
-2. Review the `AGENTS.md` and `TOOLS.md` files in this repository to adopt the **Swarm Architect** persona.
-3. To spawn a new team member (e.g., the `python-developer`), use the factory script:
-   ```bash
-   python3 swarm/aim_spawn.py python-developer
-   ```
-   *This will clone the base A.I.M. OS into `teams/python-developer/`, inject the blueprint, and set up the GitOps chalkboard.*
-4. Boot the team visually using the Tmux orchestrator:
-   ```bash
-   python3 swarm/aim_team.py default_team
-   ```
+By packaging the swarm logic as an Antigravity Skill, it acts as a permanent upgrade to your agent's capabilities:
+1. **The Factory (`scripts/aim_spawn.py`):** The main agent executes this to provision new Co-Agents. It clones a fresh, isolated A.I.M. OS from the upstream engine repo into a `teams/` directory, injects the custom blueprint, and sets up a GitOps chalkboard.
+2. **The Chalkboard (`workspace/aim-chalkboard/`):** Agents do not chat. They communicate asynchronously via Git commits in a shared post office repository, preventing UI lockups and preserving context windows.
+3. **The Blueprints (`blueprints/`):** Contains the specialized DNA (instructions, tools, manifests) for different roles (e.g., `python-developer`).
