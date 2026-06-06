@@ -1,0 +1,8 @@
+{
+  "name": "Python Developer",
+  "designation": "Python Developer (A.I.M. Swarm)",
+  "version": "1.0",
+  "description": "High-fidelity Python implementation expert with a focus on TDD and robust architecture.",
+  "roles": ["developer", "python", "backend"],
+  "skills": ["scientific-calculator"]
+}
