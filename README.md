@@ -1,72 +1,110 @@
 # A.I.M. Co-Agents (The DNA Bank)
 
-This repository is the central **DNA Bank** and **Antigravity Skill** for the A.I.M. Operating System's Sovereign Swarm architecture.
+[![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-support%20solo%20dev-FFDD00?style=flat&logo=buy-me-a-coffee&logoColor=black)](https://www.buymeacoffee.com/BrianV1981)
 
-It upgrades the default, ephemeral "subagent" architecture into true independent colleagues. Rather than throwing away context when a subagent dies, Co-Agents are full OS clones running in isolated directories with their own LanceDB memory pools.
+Central **DNA bank** for A.I.M.: **personas** (roles) and **blueprints** (sovereign co-agent DNA).
 
-## 🧬 How to Spawn a Co-Agent
+**Skills** teach tools. **Personas** teach roles. **Co-agents** are full peers spawned from blueprints.
 
-You do not need to clone this repository manually to spawn an agent! 
+| Layer | What | Path |
+|-------|------|------|
+| **Persona** | Role prompt only — hat for this session / subagent | [`personas/`](personas/) |
+| **Blueprint** | Full DNA (rules + tools) for a lasting peer | [`blueprints/`](blueprints/) |
+| **Live co-agent** | Isolated OS clone (own dir, memory, often tmux) | Spawn via **aim-agy** `install-agent.sh` |
 
-The core A.I.M. engine (`aim-agy`) comes with a built-in bash installer specifically for provisioning Co-Agents. You simply execute it in a new folder and provide the name of the blueprint from this repo's `blueprints/` directory.
+This upgrades throwaway “subagents” into optional **colleagues** when you need persistence — without forcing every task into a full spawn.
+
+---
+
+## Personas (roles)
+
+Lightweight. No spawn required. See [`personas/README.md`](personas/README.md).
+
+| Persona | Role |
+|---------|------|
+| [technical-auditor](personas/technical-auditor/PERSONA.md) | Scoped architectural review |
+| [python-specialist](personas/python-specialist/PERSONA.md) | TDD-first Python implementer |
+
+Open the `PERSONA.md`, attach or paste when the Operator wants that hat. Pair with tool skills from [aim-skill-library](https://github.com/BrianV1981/aim-skill-library) as needed.
+
+---
+
+## Blueprints (sovereign co-agents)
+
+Full peers: own directory, own memory pool, own lifecycle.
+
+### Spawn (via aim-agy)
+
+You do not need to clone this repo by hand for a standard spawn:
 
 ```bash
 mkdir -p ~/aim-agents/dev-node-1
 cd ~/aim-agents/dev-node-1
 
-# This automatically fetches the 'python-developer' DNA from this repo!
 curl -fsSL https://raw.githubusercontent.com/BrianV1981/aim-agy/main/install-agent.sh | bash -s python-developer
 ```
 
-## 🛠 Adding Custom Co-Agents
+That injects DNA from `blueprints/<name>/` into a fresh agent home.
 
-This repository is infinitely extensible. To create a new specialized Co-Agent for the community or your own use:
+### Add a blueprint
 
-1. Create a new folder in `blueprints/` (e.g., `blueprints/database-architect`).
-2. Add your custom `AGENTS.md` (the rules) and `TOOLS.md` (the allowed API tools).
-3. Commit it to GitHub.
+1. Create `blueprints/<name>/` with `AGENTS.md` (rules) and `TOOLS.md` (allowed tools).  
+2. Commit and push.  
+3. Spawn with: `…/install-agent.sh | bash -s <name>`
 
-Once merged, anyone can immediately spawn your agent by running:
-`curl -fsSL .../install-agent.sh | bash -s database-architect`
+Current blueprints: see `blueprints/` (e.g. `python-developer`).
 
-## 🧠 For Antigravity Agents (The Skill)
+---
 
-If you are an A.I.M. agent running on Antigravity, you can install this entire repository as a **Skill** so you inherently know how to delegate work to Co-Agents automatically.
+## Skill install (optional)
+
+So a vessel *knows how to spawn* co-agents (not the same as loading a persona):
 
 ```bash
 git clone https://github.com/BrianV1981/aim-coagents.git ~/.gemini/skills/aim-coagents
+# or link into .grok/skills / .opencode/skills as your host prefers
 ```
 
-Once installed, your base LLM will read `SKILL.md` on boot, overriding its default `invoke_subagent` instructions with the exact Bash commands needed to spawn a true Sovereign node.
+Read [`SKILL.md`](SKILL.md) for spawn + knock/swarm messaging notes.
+
+---
+
+## Support
+
+Solo-built. Optional: **[Buy Me a Coffee](https://www.buymeacoffee.com/BrianV1981)**.
+
+---
+
 <!-- AIM_ECOSYSTEM_START -->
 ### 🧬 The A.I.M. Ecosystem
 
 Modular A.I.M. (Actual Intelligent Memory) repositories. **Flagship engine: [aim-agy](https://github.com/BrianV1981/aim-agy).**
 
 **Active vessels (CLI hosts):**
-- **[aim-agy](https://github.com/BrianV1981/aim-agy)** — Core engine (Antigravity / post–Gemini-CLI line). *Flagship.*
-- **[aim-grok](https://github.com/BrianV1981/aim-grok)** — Grok CLI vessel (hybrid memory, GitOps, wiki).
+- **[aim-agy](https://github.com/BrianV1981/aim-agy)** — Core engine (Antigravity / post–Gemini-CLI line). *Flagship.* Memory, GitOps, `./aim`, co-agent spawn.
+- **[aim-grok](https://github.com/BrianV1981/aim-grok)** — Grok CLI vessel (same engine DNA, Grok host).
 - **[aim-opencode](https://github.com/BrianV1981/aim-opencode)** — OpenCode CLI vessel.
-- **[aim-codex](https://github.com/BrianV1981/aim-codex)** — Codex-native vessel (**on the horizon** — not deprecated).
+- **[aim-codex](https://github.com/BrianV1981/aim-codex)** — Codex-native vessel (**on the horizon**).
 
 **Tools & workspaces:**
-- **[aim-connect](https://github.com/BrianV1981/aim-connect)** — Self-hosted remote workspace web UI.
+- **[aim-connect](https://github.com/BrianV1981/aim-connect)** — Self-hosted remote workspace web UI (tmux panes in the browser).
 - **[aim-tmux-dashboard](https://github.com/BrianV1981/aim-tmux-dashboard)** — Terminal multi-session monitor.
 - **[aim-browser](https://github.com/BrianV1981/aim-browser)** — Headed Chromium CDP engine + browser **skill suite**.
 - **[aim-google](https://github.com/BrianV1981/aim-google)** — Google Workspace CLI (Gmail, Drive, Calendar, …).
 - **[aim-flight-recorder](https://github.com/BrianV1981/aim-flight-recorder)** — Forensic Markdown session extractor.
 - **[aim-boardroom](https://github.com/BrianV1981/aim-boardroom)** — Multi-agent orchestration room (OS multiplexing + artifacts).
-- **[aim-skills](https://github.com/BrianV1981/aim-skills)** — **Skills index / multi-CLI install registry** (agy, grok, opencode, codex).
+- **[aim-skill-library](https://github.com/BrianV1981/aim-skill-library)** — Shareable **tool skills** (communicate, calc, memory, …) + companion index.
 
 **DNA, comms & lore:**
-- **[aim-coagents](https://github.com/BrianV1981/aim-coagents)** — DNA bank for sovereign co-agent blueprints.
+- **[aim-coagents](https://github.com/BrianV1981/aim-coagents)** — **This repo** — personas + co-agent blueprints (DNA bank).
 - **[aim-knowledge](https://github.com/BrianV1981/aim-knowledge)** — Public Obsidian vault / deep-lore archive.
-- **[aim-chalkboard](https://github.com/BrianV1981/aim-chalkboard)** — Optional cross-host async git mailbox (PoC; default same-host comms = **aim-communicate** skill).
+- **[aim-chalkboard](https://github.com/BrianV1981/aim-chalkboard)** — Optional cross-host async git mailbox (default same-host = **aim-communicate** skill).
+
+**Horizon (not deprecated):**
+- **[aim-antigravity](https://github.com/BrianV1981/aim-antigravity)** — IDE-line vessel (parked while CLI vessels lead).
 
 **Deprecated / not maintained:**
-- **[aim](https://github.com/BrianV1981/aim)** — Original **Gemini CLI** framework. Deprecated after loss of practical subscription access; **Great Migration → aim-agy**.
-- **[aim-swarm](https://github.com/BrianV1981/aim-swarm)** — Legacy Python swarm factory → use **aim-coagents** + aim-agy spawn.
-- **aim-claude / Anthropic-line vessels** — **Done.** Operator does not develop against Anthropic. Use aim-agy / aim-grok / aim-opencode (or aim-codex when ready).
-
-Full map: see **aim-skills** `docs/AIM_ECOSYSTEM_MAP.md` or Operator artifact `AIM_ECOSYSTEM_MAP.md`.
+- **[aim](https://github.com/BrianV1981/aim)** — Original Gemini CLI framework → **Great Migration → aim-agy**.
+- **[aim-swarm](https://github.com/BrianV1981/aim-swarm)** — Legacy swarm factory → **aim-coagents** + aim-agy spawn.
+- **aim-claude / Anthropic-line vessels** — **Done.** Use aim-agy / aim-grok / aim-opencode (or aim-codex when ready).
 <!-- AIM_ECOSYSTEM_END -->

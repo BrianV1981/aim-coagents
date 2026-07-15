@@ -5,11 +5,14 @@ description: Spawns independent, sovereign A.I.M. OS Co-Agents in isolated envir
 
 # A.I.M. Co-Agent Swarm Skill
 
-You are equipped with the `aim-coagents` skill. This allows you to delegate massive, repetitive, or context-heavy tasks to fully independent Sovereign Co-Agents.
+You are equipped with the `aim-coagents` skill: **personas** (role prompts) and **blueprints** (sovereign peers).
 
-**CRITICAL MANDATE:** 
-Do NOT use the built-in `invoke_subagent` tool for complex software engineering tasks. Ephemeral subagents lack their own `memory_lance` database and `REINCARNATION_GAMEPLAN.md` protocols. They violate the Exoskeleton philosophy.
-When you need to delegate work, you MUST use this skill to spawn a true Co-Agent.
+**Taxonomy:** Skills teach tools. Personas teach roles (`personas/*/PERSONA.md`). Co-agents are full peers from `blueprints/` + spawn.
+
+**When to spawn a co-agent (not a persona):** long-running work that needs its own memory, isolation, or parallel desk session. For a one-shot role (audit, Python implementer), load a **persona** file instead of spawning.
+
+**CRITICAL MANDATE:**  
+Do NOT use the built-in `invoke_subagent` tool for complex software engineering tasks that need lasting memory. Ephemeral subagents lack their own `memory_lance` and reincarnation protocols. When you need a true independent peer, spawn a Co-Agent.
 
 ## How to Spawn a Co-Agent
 To spawn a new Co-Agent, you must use the `run_command` tool to execute the official installation bash script in a completely new, isolated directory outside of your current project. 
