@@ -84,30 +84,29 @@ Solo-built. Optional: **[Buy Me a Coffee](https://www.buymeacoffee.com/BrianV198
 Modular A.I.M. (Actual Intelligent Memory) repositories. **Flagship engine: [aim-agy](https://github.com/BrianV1981/aim-agy).**
 
 **Active vessels (CLI hosts):**
-- **[aim-agy](https://github.com/BrianV1981/aim-agy)** — Core engine (Antigravity / post–Gemini-CLI line). *Flagship.* Memory, GitOps, `./aim`, co-agent spawn.
-- **[aim-grok](https://github.com/BrianV1981/aim-grok)** — Grok CLI vessel (same engine DNA, Grok host).
+- **[aim-agy](https://github.com/BrianV1981/aim-agy)** — Core engine / *soul* (Antigravity CLI). *Flagship.* Shared nested `aim-agy_os/` ships here first.
+- **[aim-grok](https://github.com/BrianV1981/aim-grok)** — Grok CLI vessel (hybrid memory, GitOps, wiki, fleet orchestration tooling).
 - **[aim-opencode](https://github.com/BrianV1981/aim-opencode)** — OpenCode CLI vessel.
-- **[aim-codex](https://github.com/BrianV1981/aim-codex)** — Codex-native vessel (**on the horizon**).
+- **[aim-codex](https://github.com/BrianV1981/aim-codex)** — OpenAI Codex CLI vessel (greenfield nested soul + Codex overlays; primary `main`).
 
 **Tools & workspaces:**
-- **[aim-connect](https://github.com/BrianV1981/aim-connect)** — Self-hosted remote workspace web UI (tmux panes in the browser).
+- **[aim-connect](https://github.com/BrianV1981/aim-connect)** — Self-hosted remote workspace web UI.
 - **[aim-tmux-dashboard](https://github.com/BrianV1981/aim-tmux-dashboard)** — Terminal multi-session monitor.
 - **[aim-browser](https://github.com/BrianV1981/aim-browser)** — Headed Chromium CDP engine + browser **skill suite**.
 - **[aim-google](https://github.com/BrianV1981/aim-google)** — Google Workspace CLI (Gmail, Drive, Calendar, …).
 - **[aim-flight-recorder](https://github.com/BrianV1981/aim-flight-recorder)** — Forensic Markdown session extractor.
 - **[aim-boardroom](https://github.com/BrianV1981/aim-boardroom)** — Multi-agent orchestration room (OS multiplexing + artifacts).
-- **[aim-skill-library](https://github.com/BrianV1981/aim-skill-library)** — Shareable **tool skills** (communicate, calc, memory, …) + companion index.
+- **[aim-skills](https://github.com/BrianV1981/aim-skills)** — **Skills index / multi-CLI install registry** (agy, grok, opencode, codex).
 
 **DNA, comms & lore:**
-- **[aim-coagents](https://github.com/BrianV1981/aim-coagents)** — **This repo** — personas + co-agent blueprints (DNA bank).
+- **[aim-coagents](https://github.com/BrianV1981/aim-coagents)** — DNA bank for sovereign co-agent blueprints.
 - **[aim-knowledge](https://github.com/BrianV1981/aim-knowledge)** — Public Obsidian vault / deep-lore archive.
-- **[aim-chalkboard](https://github.com/BrianV1981/aim-chalkboard)** — Optional cross-host async git mailbox (default same-host = **aim-communicate** skill).
-
-**Horizon (not deprecated):**
-- **[aim-antigravity](https://github.com/BrianV1981/aim-antigravity)** — IDE-line vessel (parked while CLI vessels lead).
+- **[aim-chalkboard](https://github.com/BrianV1981/aim-chalkboard)** — Optional cross-host async git mailbox (PoC; default same-host comms = **aim-communicate** skill).
 
 **Deprecated / not maintained:**
-- **[aim](https://github.com/BrianV1981/aim)** — Original Gemini CLI framework → **Great Migration → aim-agy**.
-- **[aim-swarm](https://github.com/BrianV1981/aim-swarm)** — Legacy swarm factory → **aim-coagents** + aim-agy spawn.
-- **aim-claude / Anthropic-line vessels** — **Done.** Use aim-agy / aim-grok / aim-opencode (or aim-codex when ready).
+- **[aim](https://github.com/BrianV1981/aim)** — Original **Gemini CLI** framework. Deprecated after loss of practical subscription access; **Great Migration → aim-agy**.
+- **[aim-swarm](https://github.com/BrianV1981/aim-swarm)** — Legacy Python swarm factory → use **aim-coagents** + aim-agy spawn.
+- **aim-claude / Anthropic-line vessels** — **Done.** Operator does not develop against Anthropic. Use **aim-agy / aim-grok / aim-opencode / aim-codex**.
+
+Full map: see **aim-skills** `docs/AIM_ECOSYSTEM_MAP.md` or Operator artifact `AIM_ECOSYSTEM_MAP.md`.
 <!-- AIM_ECOSYSTEM_END -->
