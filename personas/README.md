@@ -16,6 +16,7 @@
 | **python-specialist** | Senior **implementer** (Python, TDD) | [python-specialist/PERSONA.md](python-specialist/PERSONA.md) |
 | **qa-tester** | **QA lead** — plan, repro, ship call | [qa-tester/PERSONA.md](qa-tester/PERSONA.md) |
 | **security-reviewer** | **AppSec / CSO hat** — threats + fixes | [security-reviewer/PERSONA.md](security-reviewer/PERSONA.md) |
+| **sovereign-os-engineer** | **Sovereign OS tech lead** — GitOps, TDD, RAG, reincarnation | [sovereign-os-engineer/PERSONA.md](sovereign-os-engineer/PERSONA.md) |
 
 ## Suggested pairing
 
@@ -24,6 +25,7 @@ plan / design  →  technical-auditor
 implement      →  python-specialist  (or default agent + skills)
 verify         →  qa-tester
 threats        →  security-reviewer
+sovereign lead →  sovereign-os-engineer  (full operational discipline)
 lasting peer   →  blueprints/ + install-agent.sh
 ```
 
