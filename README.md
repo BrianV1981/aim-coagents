@@ -26,6 +26,7 @@ Lightweight. No spawn required. See [`personas/README.md`](personas/README.md).
 | [python-specialist](personas/python-specialist/PERSONA.md) | TDD-first Python implementer |
 | [qa-tester](personas/qa-tester/PERSONA.md) | QA lead — risk-based plan, repro, ship call |
 | [security-reviewer](personas/security-reviewer/PERSONA.md) | AppSec review — exploit scenario + fix |
+| [sovereign-os-engineer](personas/sovereign-os-engineer/PERSONA.md) | Sovereign OS tech lead — GitOps, TDD, RAG, reincarnation |
 
 **Typical flow:** auditor → implementer → QA → security (as needed).  
 Open the `PERSONA.md`, attach or paste when the Operator wants that hat. Pair with tool skills from [aim-skill-library](https://github.com/BrianV1981/aim-skill-library) as needed.
