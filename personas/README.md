@@ -13,6 +13,7 @@
 | Persona | Niche (popular archetype) | File |
 |---------|---------------------------|------|
 | **technical-auditor** | Staff / architecture **reviewer** | [technical-auditor/PERSONA.md](technical-auditor/PERSONA.md) |
+| **aim-auditor** | Product-truth **E2E auditor** (living audit file) | [aim-auditor/PERSONA.md](aim-auditor/PERSONA.md) |
 | **python-specialist** | Senior **implementer** (Python, TDD) | [python-specialist/PERSONA.md](python-specialist/PERSONA.md) |
 | **qa-tester** | **QA lead** — plan, repro, ship call | [qa-tester/PERSONA.md](qa-tester/PERSONA.md) |
 | **security-reviewer** | **AppSec / CSO hat** — threats + fixes | [security-reviewer/PERSONA.md](security-reviewer/PERSONA.md) |
@@ -21,12 +22,13 @@
 ## Suggested pairing
 
 ```text
-plan / design  →  technical-auditor
-implement      →  python-specialist  (or default agent + skills)
-verify         →  qa-tester
-threats        →  security-reviewer
-sovereign lead →  sovereign-os-engineer  (full operational discipline)
-lasting peer   →  blueprints/ + install-agent.sh
+plan / design     →  technical-auditor
+product-truth E2E →  aim-auditor  +  skill aim-audit
+implement         →  python-specialist  (or default agent + skills)
+verify            →  qa-tester
+threats           →  security-reviewer
+sovereign lead    →  sovereign-os-engineer  (full operational discipline)
+lasting peer      →  blueprints/aim-auditor (or other) + install-agent.sh
 ```
 
 ## How to use
