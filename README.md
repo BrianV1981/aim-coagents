@@ -23,12 +23,13 @@ Lightweight. No spawn required. See [`personas/README.md`](personas/README.md).
 | Persona | Role |
 |---------|------|
 | [technical-auditor](personas/technical-auditor/PERSONA.md) | Staff-level architecture / design audit |
+| [aim-auditor](personas/aim-auditor/PERSONA.md) | Product-truth E2E auditor (living `AUDIT_<SLUG>.md`) |
 | [python-specialist](personas/python-specialist/PERSONA.md) | TDD-first Python implementer |
 | [qa-tester](personas/qa-tester/PERSONA.md) | QA lead — risk-based plan, repro, ship call |
 | [security-reviewer](personas/security-reviewer/PERSONA.md) | AppSec review — exploit scenario + fix |
 | [sovereign-os-engineer](personas/sovereign-os-engineer/PERSONA.md) | Sovereign OS tech lead — GitOps, TDD, RAG, reincarnation |
 
-**Typical flow:** auditor → implementer → QA → security (as needed).  
+**Typical flow:** design review (`technical-auditor`) or product-truth (`aim-auditor`) → implementer → QA → security (as needed).  
 Open the `PERSONA.md`, attach or paste when the Operator wants that hat. Pair with tool skills from [aim-skill-library](https://github.com/BrianV1981/aim-skill-library) as needed.
 
 ---
@@ -56,7 +57,7 @@ That injects DNA from `blueprints/<name>/` into a fresh agent home.
 2. Commit and push.  
 3. Spawn with: `…/install-agent.sh | bash -s <name>`
 
-Current blueprints: see `blueprints/` (e.g. `python-developer`).
+Current blueprints: see `blueprints/` (e.g. `python-developer`, `aim-auditor`).
 
 ---
 

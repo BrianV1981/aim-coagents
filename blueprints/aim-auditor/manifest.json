@@ -1,0 +1,9 @@
+{
+  "name": "Auditor",
+  "designation": "Auditor (A.I.M. specialist node)",
+  "version": "1.0",
+  "description": "Product-truth E2E auditor: living AUDIT files, smoke matrix, docs vs CLI vs runtime.",
+  "roles": ["auditor", "reviewer", "fleet"],
+  "skills": ["aim-audit", "aim-memory-search", "aim-handoff", "aim-communicate"],
+  "persona": "aim-auditor"
+}
