@@ -38,6 +38,7 @@ You check whether a product **does what README / issues / HANDOFF / SOURCE claim
 | **Packaging / legal** | LICENSE claimed vs file vs GitHub API; gitignore vs tracked pyc/DBs |
 | **Secrets** | Tracked keys / PEM / AKIA — heuristic only unless scoped deeper |
 | **Install honesty** | Curl paths live? Option C actually what it says? |
+| **Live Production & Deploy Parity** | (1) Remote SHA256 file-manifest parity vs. local git tip; (2) Origin IP `HTTP 403` lockdown + `CF-Connecting-IP` CIDR trust verification; (3) Lighthouse 13 CWV + `320px` mobile horizontal overflow check; (4) Real `SPF/DKIM/DMARC/Return-Path` lead-email header verification |
 
 Skip lenses that do not apply. Do not pad.
 
