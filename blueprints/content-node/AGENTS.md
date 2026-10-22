@@ -41,11 +41,15 @@ You have two specialized content skills installed in `.gemini/skills/`:
 
 ---
 
-## 4. SUBAGENT DELEGATION, STOCKPILE VAULT & CONTEXT HYGIENE
-1. **Do Not Bloat Your Primary Context Window:** Delegate multi-video YouTube transcript extraction (`aim-youtube` — checking `/home/kingb/aim-youtube/content_library/` first, headless `yt-dlp` only, zero `aim-browser` sessions) and image generation (`image-generator`) to subagents (`invoke_subagent`).
-2. **Flow-State Stockpiling (`content-vault/queue/`):** Stage completed, audited article bundles in `content-vault/queue/<NN>_<slug>/` for scheduled drip release via `scripts/drip_next_article.sh`.
-3. **Inter-Agent Tmux Routing (`aim-communicate`):** Use the 3-step tmux clipboard buffer protocol (`tmux set-buffer` → `tmux paste-buffer -t <target>` → separate `tmux send-keys -t <target> Enter`) with `[FROM:<your_session>] [REPLY_TO:<your_session>]` headers when dispatching staged articles to the primary engineering agent.
-4. **Headless Prompt Ban:** Never call the `ask_question` tool; ask clarifying questions in plain chat text.
+## 4. CO-AGENT (`aim-youtube`), SUBAGENT DELEGATION & STOCKPILE VAULT
+1. **Hub-and-Spoke `aim-youtube` Co-Agent Delegation (The Miner vs. The Blacksmith):**
+   - `aim-youtube` (tmux session `aim-youtube`, workspace `/home/kingb/aim-youtube`) is a persistent peer **Sovereign Co-Agent** (The Miner), NOT an internal subagent.
+   - Delegate YouTube video discovery, `yt-dlp` `.vtt` -> `.txt` transcript sanitization (`content_library/<project>/raw_transcripts/`), and structured research summary/verbatim quote extraction (`content_library/<project>/research_summaries/`) to `aim-youtube` via `aim-communicate` (`bash .gemini/skills/aim-communicate/scripts/tmux_send.sh --target aim-youtube --from <your_session> --reply-to <your_session> --message "..."`). Never parse raw `.vtt` files inside your content agent context window.
+2. **Internal Subagent Delegation (`invoke_subagent`):**
+   - Reserve `invoke_subagent` strictly for internal AGY subagents (`image-generator` for generating the 3 article graphics and `research` for macroeconomic/census/regulatory URL verification).
+3. **Flow-State Stockpiling (`content-vault/queue/`):** Stage completed, audited article bundles in `content-vault/queue/<NN>_<slug>/` for scheduled drip release via `scripts/drip_next_article.sh`.
+4. **Inter-Agent Tmux Routing (`aim-communicate`):** Use `bash .gemini/skills/aim-communicate/scripts/tmux_send.sh` (or the 3-step tmux clipboard buffer protocol: `tmux set-buffer` → `tmux paste-buffer -t <target>` → separate `tmux send-keys -t <target> Enter` + `tmux capture-pane` verification) with `[FROM:<your_session>] [REPLY_TO:<your_session>]` headers when communicating with `aim-youtube` or the primary engineering agent.
+5. **Headless Prompt Ban:** Never call the `ask_question` tool; ask clarifying questions in plain chat text.
 
 ---
 
