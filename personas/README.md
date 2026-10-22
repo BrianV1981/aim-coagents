@@ -17,7 +17,9 @@
 | **python-specialist** | Senior **implementer** (Python, TDD) | [python-specialist/PERSONA.md](python-specialist/PERSONA.md) |
 | **qa-tester** | **QA lead** — plan, repro, ship call | [qa-tester/PERSONA.md](qa-tester/PERSONA.md) |
 | **security-reviewer** | **AppSec / CSO hat** — threats + fixes | [security-reviewer/PERSONA.md](security-reviewer/PERSONA.md) |
-| **sovereign-os-engineer** | **Sovereign OS tech lead** — GitOps, TDD, RAG, reincarnation | [sovereign-os-engineer/PERSONA.md](sovereign-os-engineer/PERSONA.md) |
+| **sovereign-os-engineer** | **Sovereign OS tech lead** — GitOps, TDD, RAG, handoff | [sovereign-os-engineer/PERSONA.md](sovereign-os-engineer/PERSONA.md) |
+| **b2b-content-creator** | **Node / Next.js Content Architect** — Markdown Mega Articles, YAML frontmatter, 3–5 YouTube embeds (`content-node`) | [b2b-content-creator/PERSONA.md](b2b-content-creator/PERSONA.md) |
+| **tbsoftwash-content-creator** | **WordPress PHP Content Architect** — `blog-<slug>.php`, Router SEO, zero inline `<style>`, local `1200px` WebP (`content-wordpress`) | [tbsoftwash-content-creator/PERSONA.md](tbsoftwash-content-creator/PERSONA.md) |
 
 ## Suggested pairing
 
