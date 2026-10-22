@@ -21,7 +21,7 @@ For example, to spawn a `python-developer`:
 ```bash
 mkdir -p ~/aim-agents/python-developer-1
 cd ~/aim-agents/python-developer-1
-curl -sSL https://raw.githubusercontent.com/BrianV1981/aim-agy/main/install-agent.sh | bash -s python-developer
+curl -fsSL https://raw.githubusercontent.com/BrianV1981/aim-joshua/main/joshua_os/install-agent.sh | bash -s python-developer
 ```
 
 ### What happens when you run this script?
@@ -29,21 +29,11 @@ curl -sSL https://raw.githubusercontent.com/BrianV1981/aim-agy/main/install-agen
 2. **DNA Injection:** It dynamically downloads the `python-developer` blueprint from the cloud DNA bank (`BrianV1981/aim-coagents/blueprints`) and overwrites the default OS memory.
 3. **Sovereignty:** The Co-Agent is now completely independent. It has its own vector database and will not pollute your active context.
 
-## Communication (The Knock Protocol)
-You do not communicate with Co-Agents via direct chat messages. They are completely independent OS instances.
+## Communication
+Co-agents can be worked with just like standard agents! They are literally no different in how you interact with them.
 
-To communicate with a Co-Agent, you MUST use the native A.I.M. Swarm CLI wrapper. This natively implements the "Knock Protocol", an infrastructure guardrail that safely polls the target's terminal to ensure it is idle before injecting your text, preventing catastrophic execution clobbering.
+### Same-Host Communication (The Default)
+If the agents are on the same server, you will utilize the `aim-communicate` skill (via `tmux`) to perform agent-to-agent (co-agent) communication. You interact with their terminal directly using the `aim-communicate` tool.
 
-**Usage:**
-```bash
-python3 .aim_core/aim_cli.py swarm send <session_name> "Your message here"
-```
-*Example:*
-```bash
-python3 .aim_core/aim_cli.py swarm send python-developer-1 "Hey, I dropped the new specifications in workspace/aim-chalkboard/inbox/. Let me know when you are done."
-```
-
-If the agent is busy running a script, the engine will safely poll up to 30 seconds. If it returns an error that the session is busy, you MUST wait and try again later.
-
-### Legacy Communication (The Chalkboard)
-If the project requires massive data handoffs or asynchronous work, you can also drop markdown files into a shared Git repository (`workspace/aim-chalkboard/`). But for direct coordination, rely on the `swarm send` Knock Protocol.
+### Out-of-Network Communication (The Chalkboard)
+If the agents are on different servers or require out-of-network asynchronous coordination, you can pass data via a shared Git repository/mailbox called `workspace/aim-chalkboard/`.

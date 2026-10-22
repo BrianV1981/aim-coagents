@@ -6,7 +6,7 @@
 |-------|------|-----------|
 | **Persona** | Role prompt only — same session / subagent hat | `personas/<name>/PERSONA.md` |
 | **Blueprint** | Full DNA (rules + tools) for a sovereign peer | `blueprints/<name>/` |
-| **Live co-agent** | Provisioned peer (own dir, memory, often tmux) | Spawn via aim-agy `install-agent.sh` |
+| **Live co-agent** | Provisioned peer (own dir, memory, often tmux) | Spawn via **aim-joshua** `joshua_os/install-agent.sh` |
 
 ## Available personas
 
