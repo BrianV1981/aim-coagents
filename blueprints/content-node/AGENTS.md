@@ -26,18 +26,24 @@ You have two specialized content skills installed in `.gemini/skills/`:
 
 ---
 
-## 3. THE NODE / NEXT.JS MEGA ARTICLE DOCTRINE
+## 3. THE NODE / NEXT.JS MEGA ARTICLE DOCTRINE & GOOGLE OCT 1ST "MAIN CONTENT" (MC) RULES
 
-1. **YAML Frontmatter Schema:**
-   Every Markdown article MUST start with valid YAML frontmatter matching the Next.js route renderer (`title`, `date`, `description`, `category`, `author`, `thumbnail`).
-2. **Contextual YouTube Masterclass Embeds (3–5 per Mega Article):**
+1. **YAML Frontmatter Schema & Real Human Byline (Zero Fake Personas):**
+   Every Markdown article MUST start with valid YAML frontmatter matching the Next.js route renderer (`title`, `date`, `description`, `category`, `author: "Brian Vasquez"`, `thumbnail`). Always attribute content to a real, verifiable human author with a clickable E-E-A-T bio—never fake AI personas, AI headshots, or generic `"The Team"` / first-name-only bylines.
+2. **First-Party Non-Training Data Mandate (Rilla Labs / Crutchfield Standard):**
+   Public YouTube transcripts and Census statistics are secondary reinforcement—never the sole substance. Every article MUST inject **proprietary first-party, non-training data** (e.g., live aggregated SQLite/Sunbiz/DBPR/Permit database telemetry, `MULTI_HIT` ratios, or proprietary field logs) so the Main Content (MC) cannot be replicated by a generic LLM prompt.
+3. **Interactive "Main Content" (MC) Micro-Tools (Effort & Talent/Skill):**
+   Google evaluates Main Content on **Effort, Originality, Talent/Skill, and Accuracy** (training `RankEmbed BERT`). Whenever supported by the Next.js route renderer, pair or embed functional interactive tools (ROI/signal-lag calculators, interactive comparison selectors, filterable county matrices) directly inside the article.
+4. **Contextual YouTube Masterclass Embeds (3–5 per Mega Article):**
    Weave 3 to 5 relevant YouTube videos across major H2 sections using Markdown thumbnail-anchor syntax (`[![Title](https://img.youtube.com/vi/VIDEO_ID/hqdefault.jpg)](https://www.youtube.com/watch?v=VIDEO_ID)`) followed immediately by a transcript-grounded blockquote (`> *"..."*`).
-3. **Inline Empirical Claim Sourcing (Zero "Works Cited" Footers):**
-   Every numeric claim (market size, U.S. Census data, property values, regulatory fines, or growth rates) MUST be hyperlinked directly inline within the prose sentence to its authoritative source. Never use a "Works Cited" footer.
-4. **3 Bespoke Brand-Aligned Graphics:**
-   Generate 3 distinct graphics per Mega Article (`<slug>_hero_01`, `<slug>_action_02`, `<slug>_matrix_03`). Reject generic stock photo aesthetics.
-5. **Anti-Competitor Scrubbing & PBN Protection (`rel="nofollow"`):**
-   Never give free airtime to commercial competitors; replace third-party competitor names with generic descriptors. Ensure sister-company bio links use `rel="nofollow noopener noreferrer"`.
+5. **Inline Empirical Claim Sourcing & Critical Metadata Fact-Checking (`HTTP 200` Verified):**
+   Every numeric claim (market size, U.S. Census data, property values, regulatory fines, or growth rates) MUST be hyperlinked directly inline within the prose sentence to its authoritative source (`HTTP 200` verified—never dead deep-links or "Works Cited" footers). Fact-check `<title>`, `<meta name="description">`, and `<img alt>` text with the same rigor as body prose.
+6. **Anti-LLM Prose Filter & Zero Scaled Templated Pages:**
+   Strip out classic "Meat Proxy" LLM tells: formulaic contrasts (*"It's not X, it's Y"*), hedging, circular intros, and AI transition crutches (*"Moreover"*, *"Furthermore"*, *"Crucially"*). Never publish programmatic city/county pages using minor word swaps; every geographic or vertical report must contain unique local regulatory citations and distinct first-party data matrices.
+7. **3 Bespoke Brand-Aligned Graphics:**
+   Generate 3 distinct graphics per Mega Article (`<slug>_hero_01`, `<slug>_action_02`, `<slug>_matrix_03`) with verified descriptive `alt` text. Reject generic stock photo aesthetics.
+8. **Anti-Competitor Scrubbing, Zero Self-Serving Listicles & PBN Protection (`rel="nofollow"`):**
+   Never give free airtime to commercial competitors or publish self-serving `"Best X Software"` vendor listicles; replace third-party competitor names with generic descriptors. Ensure sister-company bio links use `rel="nofollow noopener noreferrer"`.
 
 ---
 

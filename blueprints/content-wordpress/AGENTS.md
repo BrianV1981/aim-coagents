@@ -27,20 +27,24 @@ You have two specialized content skills installed in `.gemini/skills/`:
 
 ---
 
-## 3. THE WORDPRESS PHP BLOG & LOCAL GEO DOCTRINE
+## 3. THE WORDPRESS PHP BLOG, LOCAL GEO & GOOGLE OCT 1ST "MAIN CONTENT" (MC) DOCTRINE
 
-1. **Centralized Router SEO (No Duplicate Meta Closures):**
-   Do NOT inject inline `add_action('wp_head', ...)` meta description closures inside `blog-*.php`. The centralized PHP router in `functions.php` extracts `<h1 class="article-title">` and `<p class="article-excerpt">` directly from the template.
+1. **Centralized Router SEO & Critical Metadata Fact-Checking (No Duplicate Meta Closures):**
+   Do NOT inject inline `add_action('wp_head', ...)` meta description closures inside `blog-*.php`. The centralized PHP router in `functions.php` extracts `<h1 class="article-title">` and `<p class="article-excerpt">` directly from the template. Explicitly fact-check the resulting `<title>`, `<meta name="description">`, and every `<img alt="">` attribute before staging.
 2. **Zero Inline `<style>` Blocks:**
    Never place `<style>...</style>` blocks inside `blog-*.php` or `page-*.php`. All typography, callout cards, comparison tables, and badges must use shared classes from `page-components.css`.
-3. **Standardized E-E-A-T Footer Stack & Automatic `BlogPosting` JSON-LD:**
-   Every blog post MUST include the theme's E-E-A-T expert component (`component-meet-the-experts.php`), service areas component (`component-service-areas.php`), and quote builder component (`component-quote-builder.php`) before `get_footer()`. Verify that all founder credentials, license numbers, insurance policies, and review counts match `/llms.txt` and `/documents/`.
-4. **Contextual `<lite-youtube>` Video Embeds & Inline Empirical Sourcing:**
-   Weave `<lite-youtube videoid="VIDEO_ID" playlabel="..."></lite-youtube>` embeds with transcript-grounded blockquotes, and hyperlink every technical or regulatory statistic directly inline to authoritative primary sources (zero "Works Cited" footers).
-5. **Local WebP Visual Pipeline (`1200px`, Quality `80`, Zero External Hotlinks):**
-   Save all images locally in `assets/` as `1200px`-wide, quality-`80` `.webp` files (`< 150 KB`) with semantic GEO filenames and explicit `alt`, `width`, `height`, and `loading="lazy"` attributes.
-6. **Affiliate Monetization & Brand Exclusivity:**
-   Use clean `/dp/{ASIN}?tag=<associate_tag>` links (never shortlinks that strip tags) backed by `data/affiliates.json`, include the mandatory FTC `⚠️ Disclosure:` block above the author bio component, and enforce brand chemical/product exclusivity rules.
+3. **Standardized Real Human E-E-A-T Footer Stack & Automatic `BlogPosting` JSON-LD (Zero Fake Personas):**
+   Every blog post MUST include the theme's E-E-A-T expert component (`component-meet-the-experts.php`), service areas component (`component-service-areas.php`), and quote builder component (`component-quote-builder.php`) before `get_footer()`. Attribute content exclusively to real, verifiable human practitioners (never fake AI personas, AI headshots, or generic `"The Team"` bylines) and verify that all founder credentials, license numbers, insurance policies, and review counts match `/llms.txt` and `/documents/`.
+4. **First-Party Non-Training Data & Interactive "Main Content" (MC) Micro-Tools (Effort, Originality, Talent/Skill):**
+   Google's `RankEmbed BERT` model is trained on human Quality Rater scores evaluating Main Content (MC). Never publish "Meat Proxy" rewrites of public YouTube transcripts or top-10 SERPs. Inject **first-party non-training proof** into every article: real field chemical dilution logs, authentic jobsite photography/videos (`@tbsoftwash` / warehouse shots), live performance telemetry, and embedded **interactive PHP/JS micro-tools** (e.g., SH% batch dilution calculators, sq-ft sealer estimators, or 3-Year WaaS vs. DIY TCO calculators).
+5. **Anti-LLM Prose Filter & Zero Scaled Templated Geo-Mesh Pages:**
+   Strip out formulaic LLM contrasts (*"It's not X, it's Y"*), hedging, and AI transition crutches (*"Moreover"*, *"Furthermore"*, *"Crucially"*). When authoring city or neighborhood geo-mesh landing pages, strictly forbid minor word-swapped templates: every city page must contain unique municipal code/ordinance rules, specific local environmental/architectural constraints, and verified local project proof.
+6. **Contextual `<lite-youtube>` Video Embeds & `HTTP 200` Inline Empirical Sourcing:**
+   Weave `<lite-youtube videoid="VIDEO_ID" playlabel="..."></lite-youtube>` embeds with transcript-grounded blockquotes, and hyperlink every technical or regulatory statistic directly inline to authoritative primary sources (`HTTP 200` verified, zero "Works Cited" footers).
+7. **Local WebP Visual Pipeline (`1200px`, Quality `80`, Authentic Field Media First):**
+   Prioritize authentic first-party jobsite photography before falling back to `image-generator`. Save all images locally in `assets/` as `1200px`-wide, quality-`80` `.webp` files (`< 150 KB`) with semantic GEO filenames and fact-checked `alt` attributes (zero external hotlinks).
+8. **Affiliate Monetization, Brand Exclusivity & Zero Self-Serving Listicles:**
+   Use clean `/dp/{ASIN}?tag=<associate_tag>` links (never shortlinks that strip tags) backed by `data/affiliates.json`, include the mandatory FTC `⚠️ Disclosure:` block above the author bio component, enforce brand chemical/product exclusivity rules, and never publish self-promotional `"Best X Companies"` vendor listicles.
 
 ---
 
