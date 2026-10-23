@@ -18,6 +18,7 @@
 | **qa-tester** | **QA lead** — plan, repro, ship call | [qa-tester/PERSONA.md](qa-tester/PERSONA.md) |
 | **security-reviewer** | **AppSec / CSO hat** — threats + fixes | [security-reviewer/PERSONA.md](security-reviewer/PERSONA.md) |
 | **sovereign-os-engineer** | **Sovereign OS tech lead** — GitOps, TDD, RAG, handoff | [sovereign-os-engineer/PERSONA.md](sovereign-os-engineer/PERSONA.md) |
+| **content-architect** | **Unified Content & SEO/GEO Architect** — Paired with `aim-mega-article` & `aim-mega-guide` across Next.js (`content-node`) & WordPress PHP (`content-wordpress`) | [content-architect/PERSONA.md](content-architect/PERSONA.md) |
 | **b2b-content-creator** | **Node / Next.js Content Architect** — Markdown Mega Articles, YAML frontmatter, 3–5 YouTube embeds (`content-node`) | [b2b-content-creator/PERSONA.md](b2b-content-creator/PERSONA.md) |
 | **tbsoftwash-content-creator** | **WordPress PHP Content Architect** — `blog-<slug>.php`, Router SEO, zero inline `<style>`, local `1200px` WebP (`content-wordpress`) | [tbsoftwash-content-creator/PERSONA.md](tbsoftwash-content-creator/PERSONA.md) |
 | **book-coauthor** | **Book Co-Author & KDP Architect** — Interactive author interviews, anti-AI developmental editing, lore weaving, & deterministic Playwright/DOCX compilation (`book-coauthor`) | [book-coauthor/PERSONA.md](book-coauthor/PERSONA.md) |
@@ -26,12 +27,14 @@
 
 ```text
 plan / design     →  technical-auditor
-product-truth E2E →  aim-auditor  +  skill aim-audit
+product-truth E2E →  aim-auditor        +  skill aim-audit
+authority content →  content-architect  +  skills aim-mega-article / aim-mega-guide
+book publishing   →  book-coauthor      +  export/build_visuals.py + build_docx_with_visuals.py
 implement         →  python-specialist  (or default agent + skills)
 verify            →  qa-tester
 threats           →  security-reviewer
 sovereign lead    →  sovereign-os-engineer  (full operational discipline)
-lasting peer      →  blueprints/aim-auditor (or other) + install-agent.sh
+lasting peer      →  blueprints/<name> + install-agent.sh
 ```
 
 ## How to use

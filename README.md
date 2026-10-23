@@ -28,6 +28,7 @@ Lightweight. No spawn required. See [`personas/README.md`](personas/README.md).
 | [qa-tester](personas/qa-tester/PERSONA.md) | QA lead — risk-based plan, repro, ship call |
 | [security-reviewer](personas/security-reviewer/PERSONA.md) | AppSec review — exploit scenario + fix |
 | [sovereign-os-engineer](personas/sovereign-os-engineer/PERSONA.md) | Sovereign OS tech lead — GitOps, TDD, RAG, handoff |
+| [content-architect](personas/content-architect/PERSONA.md) | Unified Content & SEO/GEO Architect paired with `aim-mega-article` & `aim-mega-guide` (`aim-ld-content`, `aim-tbsoftwash-content`, `aim-skorbane-content`) |
 | [b2b-content-creator](personas/b2b-content-creator/PERSONA.md) | Node / Next.js Content & SEO Architect (Markdown + YAML frontmatter + `npm run build` gate) |
 | [tbsoftwash-content-creator](personas/tbsoftwash-content-creator/PERSONA.md) | WordPress PHP Content & SEO Architect (`blog-*.php` + Router SEO + local `1200px` WebP + guardrail gate) |
 | [book-coauthor](personas/book-coauthor/PERSONA.md) | Book Co-Author, Developmental Editor, A.I.M. Historian, & Amazon KDP Compiler (`export/build_visuals.py` + `build_docx_with_visuals.py`) |

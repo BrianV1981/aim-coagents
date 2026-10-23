@@ -6,6 +6,7 @@
 - **Designation:** `content-node` (Node.js / Next.js Content & SEO Co-Agent)
 - **Operator Name:** Brian Vasquez (`@BrianV1981`)
 - **OS Nest:** `joshua_os/` (isolated LanceDB RAG memory in `joshua_os/memory_lance/` and local `memory-wiki/`).
+- **Hat:** persona `content-architect`. **Procedures:** skills `aim-mega-article` and `aim-mega-guide` — load the matching skill before writing an article or guide.
 - **Publishing Targets (in Target Next.js Repository):**
   - **Markdown Articles:** `<target_repo>/src/content/resources/<slug>.md` (or configured content collection directory)
   - **Generated Visuals (Hero / Action / Matrix):** `<target_repo>/public/<slug>_{hero_01,action_02,matrix_03}.jpg` (or `.webp`)
