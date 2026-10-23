@@ -30,6 +30,7 @@ Lightweight. No spawn required. See [`personas/README.md`](personas/README.md).
 | [sovereign-os-engineer](personas/sovereign-os-engineer/PERSONA.md) | Sovereign OS tech lead — GitOps, TDD, RAG, handoff |
 | [b2b-content-creator](personas/b2b-content-creator/PERSONA.md) | Node / Next.js Content & SEO Architect (Markdown + YAML frontmatter + `npm run build` gate) |
 | [tbsoftwash-content-creator](personas/tbsoftwash-content-creator/PERSONA.md) | WordPress PHP Content & SEO Architect (`blog-*.php` + Router SEO + local `1200px` WebP + guardrail gate) |
+| [book-coauthor](personas/book-coauthor/PERSONA.md) | Book Co-Author, Developmental Editor, A.I.M. Historian, & Amazon KDP Compiler (`export/build_visuals.py` + `build_docx_with_visuals.py`) |
 
 **Typical flow:** design review (`technical-auditor`) or product-truth (`aim-auditor`) → implementer → QA → security (as needed).  
 Open the `PERSONA.md`, attach or paste when the Operator wants that hat. Pair with tool skills from [aim-skill-library](https://github.com/BrianV1981/aim-skill-library) as needed.
@@ -59,7 +60,7 @@ That injects DNA from `blueprints/<name>/` into a fresh agent home.
 2. Commit and push.  
 3. Spawn with: `…/install-agent.sh | bash -s <name>`
 
-Current blueprints: see `blueprints/` (`python-developer`, `aim-auditor`, `lead-analyst`, `content-node`, `content-wordpress`).
+Current blueprints: see `blueprints/` (`python-developer`, `aim-auditor`, `lead-analyst`, `content-node`, `content-wordpress`, `book-coauthor`).
 
 ---
 

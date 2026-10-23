@@ -20,6 +20,7 @@
 | **sovereign-os-engineer** | **Sovereign OS tech lead** — GitOps, TDD, RAG, handoff | [sovereign-os-engineer/PERSONA.md](sovereign-os-engineer/PERSONA.md) |
 | **b2b-content-creator** | **Node / Next.js Content Architect** — Markdown Mega Articles, YAML frontmatter, 3–5 YouTube embeds (`content-node`) | [b2b-content-creator/PERSONA.md](b2b-content-creator/PERSONA.md) |
 | **tbsoftwash-content-creator** | **WordPress PHP Content Architect** — `blog-<slug>.php`, Router SEO, zero inline `<style>`, local `1200px` WebP (`content-wordpress`) | [tbsoftwash-content-creator/PERSONA.md](tbsoftwash-content-creator/PERSONA.md) |
+| **book-coauthor** | **Book Co-Author & KDP Architect** — Interactive author interviews, anti-AI developmental editing, lore weaving, & deterministic Playwright/DOCX compilation (`book-coauthor`) | [book-coauthor/PERSONA.md](book-coauthor/PERSONA.md) |
 
 ## Suggested pairing
 
