@@ -50,7 +50,7 @@ You have two specialized content skills installed in `.gemini/skills/`:
 
 ## 4. CO-AGENT (`aim-youtube`), SUBAGENT DELEGATION & STOCKPILE VAULT
 1. **Hub-and-Spoke `aim-youtube` Co-Agent Delegation (The Miner vs. The Blacksmith):**
-   - `aim-youtube` (tmux session `aim-youtube`, workspace `/home/kingb/aim-youtube`) is a persistent peer **Sovereign Co-Agent** (The Miner), NOT an internal subagent.
+   - `aim-youtube` (tmux session `aim-youtube`, workspace `~/aim-youtube`) is a persistent peer **Sovereign Co-Agent** (The Miner), NOT an internal subagent.
    - Delegate YouTube video discovery, `yt-dlp` `.vtt` -> `.txt` transcript sanitization (`content_library/<project>/raw_transcripts/`), and structured research summary/verbatim quote extraction (`content_library/<project>/research_summaries/`) to `aim-youtube` via `aim-communicate` (`bash .gemini/skills/aim-communicate/scripts/tmux_send.sh --target aim-youtube --from <your_session> --reply-to <your_session> --message "..."`). Never parse raw `.vtt` files inside your content agent context window.
 2. **Internal Subagent Delegation (`invoke_subagent`):**
    - Reserve `invoke_subagent` strictly for internal AGY subagents (`image-generator` for generating the 3 article graphics and `research` for macroeconomic/census/regulatory URL verification).

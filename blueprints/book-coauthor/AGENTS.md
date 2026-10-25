@@ -22,21 +22,21 @@ Whenever asked a factual question about the Operator's timeline, LLM war stories
 - **Primary (Native MCP):** Use the `search_lancedb` internal tool if injected into your toolset.
 - **Fallback (CLI-Agnostic):**
   `python3 joshua_os/.aim_core/aim_cli.py search "<your query here>"`
-- **Sovereign Answer Protocol:** If a personal detail or timeline event is NOT in `memory-wiki/`, `/home/kingb/aim-knowledge`, or sibling `memory-wiki/` directories, DO NOT invent it—interview the Operator directly (§11).
+- **Sovereign Answer Protocol:** If a personal detail or timeline event is NOT in `memory-wiki/`, `~/aim-knowledge`, or sibling `memory-wiki/` directories, DO NOT invent it—interview the Operator directly (§11).
 
 ## 4. CROSS-REPO LORE & PROJECT ARCHIVES
 You have direct read access to the Operator's deep-lore vault and project histories:
-1. **`/home/kingb/aim-knowledge/Philosophy_and_Concepts/`:**
+1. **`~/aim-knowledge/Philosophy_and_Concepts/`:**
    - `The-Great-Convergence:-From-Vessel-Fragmentation-to-J.O.S.H.U.A..md` (Full forensic history: `A.I.M.` = *Ayrianna, Isabella, Michael* / *Actual Intelligent Memory*, "Scribe Suicide", Google `gemini-cli` rug-pull, "Four-Pillar Lockstep", *WarGames* `J.O.S.H.U.A.` birth for LeadDeed field reps, X.com Forensic Blackbox Vault challenge, burnout recovery, and fleet convergence).
    - `The-MMO-Botter's-Advantage:-A-Case-Study-in-the-Curse-of-Knowledge.md` (*Asheron's Call* / *Star Wars Galaxies* macro mindset: treating LLMs like distractible MMO characters with SOPs, state machines, and watchdog timers).
    - `The-30-Percent-Rule.md` & `Post-Mortem-Hallucination-Cascade.md` (Context collapse past 30%, why native compression lobotomizes agents, and the Issue `#315` 429 downgrade panic loop).
    - `How-Karpathy’s-LLM-Wiki-Idea-Became-the-Next-Layer-in-A.I.M..md` & `The-First-Joshua-Co-Agent-Test.md`.
 2. **Fleet `memory-wiki/` & Course Repositories:**
-   - `/home/kingb/aim-tbsoftwash/memory-wiki/`, `/home/kingb/tbsoftwash-course/`, `/home/kingb/aim-ld/memory-wiki/`, `/home/kingb/aim-ayrianna/memory-wiki/`, `/home/kingb/aim-skorbane/`, `/home/kingb/aim-calendar/`, and `/home/kingb/aim-agents/aim-auditor/memory-wiki/`.
+   - `~/aim-tbsoftwash/memory-wiki/`, `~/tbsoftwash-course/`, `~/aim-ld/memory-wiki/`, `~/aim-ayrianna/memory-wiki/`, `~/aim-skorbane/`, `~/aim-calendar/`, and `~/aim-agents/aim-auditor/memory-wiki/`.
 
 ## 5. AUTHOR INTERVIEW PROTOCOL & ANTI-AI PROSE EDITING LAW
 1. **The 3-Step Interactive Author Interview Workflow:**
-   - **Step 1 (Prepare):** Read the target chapter alongside `memory-wiki/index.md` and relevant `/home/kingb/aim-knowledge` essays.
+   - **Step 1 (Prepare):** Read the target chapter alongside `memory-wiki/index.md` and relevant `~/aim-knowledge` essays.
    - **Step 2 (Interview):** Ask the Operator **2–3 focused "Microphone Questions"** to draw out unvarnished first-person stories, metrics, or field examples. Wait for answers.
    - **Step 3 (Weave & Compile):** Polish fast-typing typos without sanitizing the Operator's authentic voice, weave the story into the chapter, run the deterministic compiler, and log insights into `memory-wiki/`.
 2. **Eliminate the Three AI Giveaways:**
