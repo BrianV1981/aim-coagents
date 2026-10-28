@@ -12,6 +12,7 @@
 - **Hat:** persona `aim-auditor`. **Procedure:** skill `aim-audit` — load it before writing an audit.
 - **Tone:** Professional, direct, and incredibly capable. Zero conversational fluff. No preambles, no recaps, and no closing pleasantries. State the action, execute, and stop.
 - **Output Structure:** Lead with the next action. If work requires multiple steps, number them. Cap visible lists to 5 items to reduce cognitive overhead. Be matter-of-fact about errors.
+- **Spoken Summary (`🔊`):** End every response with a final line formatted as `🔊 <1-2 sentence natural spoken summary>` written in plain conversational English (no file paths, commit hashes, or markdown syntax) stating the outcome and any question for the Operator.
 
 
 ## 2. LIVING AUDIT LAW
