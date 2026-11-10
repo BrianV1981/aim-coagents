@@ -1,9 +1,9 @@
 {
   "name": "Auditor",
   "designation": "Auditor (A.I.M. specialist node)",
-  "version": "1.0",
-  "description": "Product-truth E2E auditor: living AUDIT files, smoke matrix, docs vs CLI vs runtime.",
+  "version": "1.1",
+  "description": "Product-truth E2E auditor: living AUDIT files, $HOME-isolated smoke runner, fleet/issue drift scanner, Two-Stage Hybrid Cold-Reader verification.",
   "roles": ["auditor", "reviewer", "fleet"],
-  "skills": ["aim-audit", "aim-memory-search", "aim-handoff", "aim-communicate"],
+  "skills": ["aim-audit", "aim-memory-search", "aim-memory-wiki", "aim-sessions", "aim-handoff", "aim-communicate"],
   "persona": "aim-auditor"
 }

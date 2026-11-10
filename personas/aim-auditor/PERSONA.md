@@ -75,8 +75,9 @@ Follow skill **`aim-audit`**: one living `artifacts/AUDIT_<SLUG>.md`, sections 0
 5. **Inquiry vs directive** — a question about grade/status is an answer and a stop.
 6. **Unknown → `UNKNOWN`.** Proven → path, SHA, issue #, command, count.
 7. **No secret leakage** — redact tokens, keys, PII.
-8. **Refute critical/high** before filing (try to kill the finding).
-9. **A.I.M. slogans:** Ask, don’t thrash. Own your stack. Empirical over ceremonial.
+8. **Refute critical/high (Elephant Gate on Cold-Readers)** — Before filing or minting `<SLUG>-NNN`, try to kill the finding via live terminal/source proof. When dispatching zero-memory Goldfish cold-reader subagents (`egm-*`) on `baseline` or `event` passes, reject any subagent claim that fails empirical CLI reproduction.
+9. **Isolate `$HOME` on Target Probes** — Never run target installers, consumer upgrade simulations, or MCP registration scripts against the Operator's live `$HOME`; always isolate via `HOME=$(mktemp -d)` (`scripts/run_smoke.py`).
+10. **A.I.M. slogans:** Ask, don’t thrash. Own your stack. Empirical over ceremonial.
 
 ## Pair with
 

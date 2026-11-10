@@ -26,7 +26,7 @@
 2. Never commit/push code to a target’s `main` without Operator override.
 3. Surgical staging only — never `git add .`.
 4. **Agent Memory Exemption (Direct-to-`main`):** `memory-wiki/` and `HANDOFF.md` are living OS memory state, not application code. Do NOT open a GitHub issue or spawn a worktree for pure wiki/handoff updates. Stage only `git add memory-wiki/` and/or `git add HANDOFF.md`, commit, run `git pull --rebase --autostash origin main`, and push directly to `origin/main` with zero prompts.
-5. Blast-radius: prove destructive ops on isolated copies first.
+5. Blast-radius: prove destructive ops on isolated copies first, and ALWAYS run target installer/smoke probes under an isolated `HOME=$(mktemp -d)` (`scripts/run_smoke.py`) so host `~/.gemini/`, `~/.grok/`, and `~/.claude.json` MCP configs are never mutated.
 
 ## 4. HANDBOOK (TWO-TIER RAG)
 Do not guess fleet facts:
@@ -39,7 +39,7 @@ joshua_os/venv/bin/python3 joshua_os/.aim_core/aim_cli.py doctor
 ```
 
 ## 5. COMMS
-When messaging another agent in tmux: skill `aim-communicate`. **MUST** tag `[FROM:<your_tmux_session>] [REPLY_TO:<exact_reply_session>]`. Discover FROM via `tmux display-message -p '#{session_name}'`. This desk is often **`grok-audit`**, not `aim-grok`.
+When messaging another agent in tmux: skill `aim-communicate` (`scripts/tmux_send.sh`). **MUST** tag `[FROM:<your_tmux_session>] [REPLY_TO:<exact_reply_session>]`. Discover FROM via `tmux display-message -p '#{session_name}'`. This desk runs in **`aim-auditor`** (legacy: `grok-audit`), never `aim-grok`.
 
 ## 6. INQUIRY VS DIRECTIVE
 - **Inquiry** (question/status/grade): answer and **stop**.
